@@ -13,7 +13,9 @@
 
     while (guess != secret_number) {
       previous_guess = guess
-      guess = prompt("guess again, my little rabid mole rat")
+      guess = prompt("guess again, my little rabid mole rat", previous_guess)
+
+      if (guess === null) { alert("goodbye trolley person"); throw "done" }
 
       if (guess == secret_number) {
         break;
