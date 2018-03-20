@@ -1,0 +1,37 @@
+<html>
+  <h1>bingee bingee!</h1>
+  <script>
+    var secret_number = Math.ceil(Math.random() * 1000)
+    var guess = prompt("pick any number between 1 and 1000")
+    if (guess == secret_number) {
+      alert("Holy shit that's a hole in one!!!!!! Dang you are a really cute guesser.")
+    } else {
+      alert("Not good enough pal, think of a cuter number.")
+    }
+
+    var previous_guess, previous_distance, new_distance;
+
+    while (guess != secret_number) {
+      previous_guess = guess
+      guess = prompt("guess again, my little rabid mole rat")
+
+      if (guess == secret_number) {
+        break;
+      }
+
+      previous_distance = Math.abs(secret_number - previous_guess)
+      new_distance = Math.abs(secret_number - guess)
+
+      if (new_distance > previous_distance) {
+        alert("getting colder my true sweet zuccini")
+      } else if (new_distance < previous_distance) {
+        alert("getting warmer, my little pickle-maker")
+      } else {
+        alert("you have a lot of heart but no ambition, you've plateau'd")
+      }
+    }
+
+    alert("took ya long enough, you cute little shrimp nibblet")
+
+  </script>
+</html>
